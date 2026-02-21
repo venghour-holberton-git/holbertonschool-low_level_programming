@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point of the program 
+ * main - entry point of the program
  * using print f 
  * */
 
