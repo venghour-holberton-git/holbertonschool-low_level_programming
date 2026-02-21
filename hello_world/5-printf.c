@@ -3,7 +3,7 @@
 /**
  * main - entry point of the program
  * using print f 
- * */
+*/
 
 int main(void)
 {
