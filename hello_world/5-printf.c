@@ -1,9 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - entry point of the program
- * using print f 
-*/
+ * main - Entry point of the program
+ *
+ * Description: prints a message using printf
+ *
+ * Return: Always 0
+ */
 
 int main(void)
 {
