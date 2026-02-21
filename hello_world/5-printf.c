@@ -1,6 +1,9 @@
 #include <stdio.h>
 
-/** using print f */
+/**
+ * main - entry point of the program 
+ * using print f 
+ * */
 
 int main(void)
 {
