@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "CFILE is: $CFILE"
 gcc "$CFILE" -o "cisfun"
