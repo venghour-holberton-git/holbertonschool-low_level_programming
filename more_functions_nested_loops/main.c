@@ -6,16 +6,28 @@
  *
  * Return: Always 0.
  */
+
+void print_diagonal(int n);
+
 int main(void)
 {
-    int i, j;
-    for (i = 0; i < 10; i++){
-	    for (j = 0; j <= 14; j++)
-	    {
-		    _putchar('_');
-	    }
-    }
+    print_diagonal(3);
+    print_diagonal(8);
     return (0);
+}
+
+void print_diagonal(int n)
+{
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < i; j++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
 }
 
 int _putchar(char c)
