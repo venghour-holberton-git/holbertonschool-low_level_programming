@@ -1,8 +1,11 @@
 #include "main.h"
 
 /**
- * @n: number of times _ are print
- * print_line - print _
+ * print_line - prints a line of n underscores
+ * @n: number of times the _ character should be printed
+ *
+ * Description: This function prints a straight line using the
+ * _ character, repeated n times, followed by a new line.
  */
 
 void print_line(int n)
