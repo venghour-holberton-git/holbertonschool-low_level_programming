@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * print_squre - print square
- * @size: square size
- * Description: print char in a sqaure format
+ * print_square - prints a square using the # character
+ * @size: size of the square (number of rows and columns)
+ *
+ * Description: This function prints a square of size `size` using
+ * the `#` character. If `size` is 0 or negative, it prints a newline.
  */
 
 void print_square(int size)
