@@ -8,14 +8,31 @@
  */
 
 void print_diagonal(int n);
+void print_triangle(int size);
 
 int main(void)
 {
-    print_diagonal(3);
-    print_diagonal(8);
+    print_triangle(5);
     return (0);
 }
 
+void print_triangle(int size)
+{
+        int i,j;
+
+        for (i = 0; i < size; i++)
+        {
+                for (j = 0; j < size - i - 1; j++)
+                {
+                        _putchar(' ');
+                }
+                for ( ; j < size; j++)
+                {
+                        _putchar('#');
+                }
+		_putchar('\n');
+        }
+}
 void print_diagonal(int n)
 {
 	int i, j;
