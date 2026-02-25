@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - entry point
+ * Description: print Fizz Buzz
+ * Return: 0
+ */
+
 int main(void)
 {
 	int i;
