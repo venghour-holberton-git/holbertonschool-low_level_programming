@@ -1,7 +1,11 @@
 # include "main.h"
 
 /**
- * Description:  prints 10 times the alphabet
+ * print_alphabet_x10 - prints the lowercase alphabet 10 times
+ *
+ * Description: Each line contains the alphabet from 'a' to 'z'.
+ *              Prints a newline after each line.
+ * Return: void
  */
 
 void print_alphabet_x10(void)
