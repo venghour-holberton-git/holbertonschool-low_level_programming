@@ -13,9 +13,9 @@ int main(void)
 
     while (str[i] != '\0')
     {
-        putchar(str[i]);
+        printf("%c" ,str[i]);
         i++;
     }
-    putchar('\n');
+    printf("\n");
     return (0);
 }
