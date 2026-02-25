@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * print_line - print _
+ */
+
 void print_line(int n)
 {
 	int i;
