@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_triangle - print triangle
+ * @size: triangle size
+ * Description: print triangle of size n
+ */
+
 void print_triangle(int size)
 {
 	int i,j;
