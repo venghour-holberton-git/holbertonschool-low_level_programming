@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char* n = "yyyt";
+	char* n = "Holberton!";
 	int i = 0;
 	
 	while (n[i] != '\0')
