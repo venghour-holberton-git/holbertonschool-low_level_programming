@@ -5,15 +5,17 @@
 int _putchar(char c);
 int main(void)
 {
-	char* n = "Holberton!";
-	int i = 0;
-	
-	while (n[i] != '\0')
+	char* str = "Holberton!";
+	int i;
+
+	while(str[i] != '\0')
 	{
-		_putchar(n[i]);
+		_putchar(str[i]);
 		i++;
 	}
-	printf("\n");
+	_putchar('\n');
+	return (0);
+
 }
 
 int _putchar(char c)
