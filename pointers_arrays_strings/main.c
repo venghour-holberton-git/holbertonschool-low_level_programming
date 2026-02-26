@@ -4,5 +4,11 @@
 int main(void)
 {
 	char* n = "yyyt";
-	printf("__n__ %ld", strlen(n));
+	int i = 0;
+	
+	while (n[i] != '\0')
+	{
+		i++;
+	}
+	printf("i__ %d", i);
 }
