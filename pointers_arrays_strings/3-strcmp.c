@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - compare s1 and s2 base on the ASCII value of the 
+ * _strcmp - compare s1 and s2 base on the ASCII value of the
  * characters in the string
  * @s1: string 1
  * @s2: input string 2
