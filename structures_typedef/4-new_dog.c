@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
 
 /**
@@ -15,34 +14,48 @@ dog_t *new_dog(char *name, float age, char *owner)
     dog_t *d;
     char *name_copy;
     char *owner_copy;
-    size_t len_name, len_owner;
+    unsigned int i, len_name = 0, len_owner = 0;
 
     if (name == NULL || owner == NULL)
         return (NULL);
 
+    /* Calculate string lengths manually */
+    while (name[len_name] != '\0')
+        len_name++;
+    while (owner[len_owner] != '\0')
+        len_owner++;
+
+    /* Allocate memory for struct dog */
     d = malloc(sizeof(dog_t));
     if (d == NULL)
         return (NULL);
 
-    len_name = strlen(name) + 1;
-    name_copy = malloc(len_name);
+    /* Allocate memory for name */
+    name_copy = malloc(len_name + 1);
     if (name_copy == NULL)
     {
         free(d);
         return (NULL);
     }
-    strcpy(name_copy, name);
 
-    len_owner = strlen(owner) + 1;
-    owner_copy = malloc(len_owner);
+    /* Copy name manually */
+    for (i = 0; i <= len_name; i++)
+        name_copy[i] = name[i];
+
+    /* Allocate memory for owner */
+    owner_copy = malloc(len_owner + 1);
     if (owner_copy == NULL)
     {
         free(name_copy);
         free(d);
         return (NULL);
     }
-    strcpy(owner_copy, owner);
 
+    /* Copy owner manually */
+    for (i = 0; i <= len_owner; i++)
+        owner_copy[i] = owner[i];
+
+    /* Initialize struct fields */
     d->name = name_copy;
     d->age = age;
     d->owner = owner_copy;
