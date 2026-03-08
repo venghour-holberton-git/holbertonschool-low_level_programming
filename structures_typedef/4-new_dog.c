@@ -11,54 +11,47 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    dog_t *d;
-    char *name_copy;
-    char *owner_copy;
-    unsigned int i, len_name = 0, len_owner = 0;
+	dog_t *d;
+	char *name_copy;
+	char *owner_copy;
+	unsigned int i, len_name = 0, len_owner = 0;
 
-    if (name == NULL || owner == NULL)
-        return (NULL);
+	if (name == NULL || owner == NULL)
+		return (NULL);
 
-    /* Calculate string lengths manually */
-    while (name[len_name] != '\0')
-        len_name++;
-    while (owner[len_owner] != '\0')
-        len_owner++;
+	while (name[len_name] != '\0')
+		len_name++;
+	while (owner[len_owner] != '\0')
+		len_owner++;
 
-    /* Allocate memory for struct dog */
-    d = malloc(sizeof(dog_t));
-    if (d == NULL)
-        return (NULL);
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
+		return (NULL);
 
-    /* Allocate memory for name */
-    name_copy = malloc(len_name + 1);
-    if (name_copy == NULL)
-    {
-        free(d);
-        return (NULL);
-    }
+	name_copy = malloc(len_name + 1);
+	if (name_copy == NULL)
+	{
+		free(d);
+		return (NULL);
+	}
 
-    /* Copy name manually */
-    for (i = 0; i <= len_name; i++)
-        name_copy[i] = name[i];
+	for (i = 0; i <= len_name; i++)
+		name_copy[i] = name[i];
 
-    /* Allocate memory for owner */
-    owner_copy = malloc(len_owner + 1);
-    if (owner_copy == NULL)
-    {
-        free(name_copy);
-        free(d);
-        return (NULL);
-    }
+	owner_copy = malloc(len_owner + 1);
+	if (owner_copy == NULL)
+	{
+		free(name_copy);
+		free(d);
+		return (NULL);
+	}
 
-    /* Copy owner manually */
-    for (i = 0; i <= len_owner; i++)
-        owner_copy[i] = owner[i];
+	for (i = 0; i <= len_owner; i++)
+		owner_copy[i] = owner[i];
+	
+	d->name = name_copy;
+	d->age = age;
+	d->owner = owner_copy;
 
-    /* Initialize struct fields */
-    d->name = name_copy;
-    d->age = age;
-    d->owner = owner_copy;
-
-    return (d);
+	return (d);
 }
