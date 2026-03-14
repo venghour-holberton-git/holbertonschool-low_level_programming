@@ -6,8 +6,7 @@ void print_all(const char * const format, ...)
 {
     va_list args;
     unsigned int i = 0;
-    int len = 0;
-    char *str;
+    unsigned int len = 0;
     char *sep = ", ";
 
     va_start(args, format);
