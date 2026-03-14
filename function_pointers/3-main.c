@@ -7,7 +7,8 @@
  * main - entry point
  * @argc: number of arguments
  * @argv: array of arguments
- * description: using argc and argv to do math operation
+ * Description: using argc and argv to do math operation
+ * Return: what the function return
  */
 
 int main(int argc, char *argv[])
