@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_args(va_list *args, char arg,char **sep)
+void print_args(va_list *args, char arg, char **sep)
 {
 	char *str;
+
 	switch (arg)
 			{
 			case 'c':
@@ -41,20 +42,20 @@ void print_args(va_list *args, char arg,char **sep)
 }
 void print_all(const char * const format, ...)
 {
-    va_list args;
-    unsigned int i = 0;
-    unsigned int len = 0;
-    char *sep = "";
+	va_list args;
+	unsigned int i = 0;
+	unsigned int len = 0;
+	char *sep = "";
 
-    va_start(args, format);
+	va_start(args, format);
 	if (format)
 	{
 		while (format[len])
 		{
 			len++;
 		}
-        	while (format[i])
-        	{
+		while (format[i])
+		{
 			print_args(&args, format[i], &sep);
 			i++;
 		}
