@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/*
+ * main - entry point
+ */
+
 int main(int argc, char *argv[])
 {
 	int (*result)(int, int);
