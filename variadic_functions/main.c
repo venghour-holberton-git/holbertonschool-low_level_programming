@@ -3,6 +3,6 @@
 
 int main (void)
 {
-	print_numbers(NULL , 3, 4, 6, 7);
+	print_strings(", " , 3, "Jee", "Cars", "Garrr");
 	return (0);
 }
