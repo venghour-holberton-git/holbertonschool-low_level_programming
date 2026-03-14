@@ -5,6 +5,7 @@
 
 /*
  * main - entry point
+ * description: using argc and argv to do math operation
  */
 
 int main(int argc, char *argv[])

@@ -2,6 +2,12 @@
 #include <string.h>
 #include <stddef.h>
 
+/**
+ *get_op_func - get math function
+ *@s: input operator
+ *Return: a pointer to function
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
