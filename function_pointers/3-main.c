@@ -5,6 +5,8 @@
 
 /*
  * main - entry point
+ * @argc: number of arguments
+ * @argv: array of arguments
  * description: using argc and argv to do math operation
  */
 
