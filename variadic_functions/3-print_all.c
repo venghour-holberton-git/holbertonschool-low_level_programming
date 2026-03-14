@@ -2,13 +2,49 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+void print_args(va_list *args, char arg,char **sep)
+{
+	char *str;
+	switch (arg)
+			{
+			case 'c':
+				printf("%s", *sep);
+				*sep = ", ";
+				printf("%c", va_arg(*args, int));
+				break;
+			case 'i':
+				printf("%s", *sep);
+				*sep = ", ";
+				printf("%d", va_arg(*args, int));
+				break;
+			case 'f':
+				printf("%s", *sep);
+				*sep = ", ";
+				printf("%f", va_arg(*args, double));
+				break;
+			case 's':
+				printf("%s", *sep);
+				*sep = ", ";
+				str = va_arg(*args, char *);
+				if (str == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
+				break;
+			default:
+				printf("%s", *sep);
+				*sep = "";
+				break;
+			}
+}
 void print_all(const char * const format, ...)
 {
     va_list args;
     unsigned int i = 0;
     unsigned int len = 0;
     char *sep = "";
-    char *str;
 
     va_start(args, format);
 	if (format)
@@ -19,40 +55,7 @@ void print_all(const char * const format, ...)
 		}
         	while (format[i])
         	{
-			
-			switch (format[i])
-			{
-			case 'c':
-				printf("%s", sep);
-				sep = ", ";
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%s", sep);
-				sep = ", ";
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%s", sep);
-				sep = ", ";
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				printf("%s", sep);
-				sep = ", ";
-				str = va_arg(args, char *);
-				if (str == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-				printf("%s", str);
-				break;
-			default:
-				printf("%s", sep);
-				sep = "";
-				break;
-			}
+			print_args(&args, format[i], &sep);
 			i++;
 		}
 		va_end(args);
