@@ -3,12 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
- * main - entry point
- * @argc: number of arguments
- * @argv: array of arguments
- * Description: using argc and argv to do math operation
- * Return: what the function return
+/**
+ * main - Entry point for a simple calculator program
+ * @argc: Number of command-line arguments
+ * @argv: Array of command-line arguments
+ *
+ * Description: Performs basic arithmetic (+, -, *, /, %) on two numbers
+ *              provided as command-line arguments. Exits with an error code
+ *              if the input is invalid or if there is division/modulo by zero.
+ * Return: 0 on success, exits with 98, 99, or 100 on errors.
  */
 
 int main(int argc, char *argv[])
