@@ -3,6 +3,6 @@
 
 int main (void)
 {
-	print_strings(", " , 3, "Jee", "Cars", "Garrr");
+	print_all("ceis", 'B', 3, "stSchool");
 	return (0);
 }
