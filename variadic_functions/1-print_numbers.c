@@ -4,8 +4,9 @@
 #include <stdarg.h>
 
 /**
- * print_number - print all number with seperator
- * @seperator: input seperator
+ * print_numbers - print all number with seperator
+ * @separator: input seperator
+ * @n: number of elements
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
