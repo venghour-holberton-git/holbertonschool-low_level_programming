@@ -3,7 +3,6 @@
 
 int main (void)
 {
-	int total = sum_them_all(3, 2, 1, 8);
-	printf("_total_ %d\n", total);
+	print_numbers(NULL , 3, 4, 6, 7);
 	return (0);
 }
