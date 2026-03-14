@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * print_args - print text base on format
+ * @args: args list
+ * @arg: input format
+ * @sep: separator
+ */
+
 void print_args(va_list *args, char arg, char **sep)
 {
 	char *str;
@@ -40,6 +47,12 @@ void print_args(va_list *args, char arg, char **sep)
 				break;
 			}
 }
+
+/**
+ * print_all - print every parameter
+ * @format: input format list
+ */
+
 void print_all(const char * const format, ...)
 {
 	va_list args;
