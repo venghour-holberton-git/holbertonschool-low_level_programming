@@ -7,8 +7,9 @@ int op_add(int a, int b)
 int op_sub(int a, int b)
 {
 	if (a > b)
+	{
 		return a - b;
-	if (b  > a)
+	}
 		return b - a;
 }
 int op_mul(int a, int b)
