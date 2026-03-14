@@ -8,6 +8,7 @@ void print_all(const char * const format, ...)
     unsigned int i = 0;
     unsigned int len = 0;
     char *sep = ", ";
+    char *str;
 
     va_start(args, format);
 
@@ -34,7 +35,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				sep = ", ";
-				char *str = va_arg(args, char *);
+				str = va_arg(args, char *);
 				if (str == NULL)
 				{
 					printf("(nil)");
