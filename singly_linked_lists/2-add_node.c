@@ -4,6 +4,7 @@
  * add_node - add new node add the beginning
  * @head: head of the node
  * @str: string to be added
+ * Return: NULL if malloc fail or new node address on success
  */
 
 list_t *add_node(list_t **head, const char *str)
