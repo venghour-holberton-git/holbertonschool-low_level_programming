@@ -4,10 +4,10 @@
 #include "lists.h"
 
 /*
- * print_list - print the all string on the list
- * @h - input list
- * description - print all string
- * Return: number of elements available on the list
+ * print_list - prints all the strings in the list
+ * @h: pointer to the list
+ *
+ * Return: number of elements in the list
  */
 
 size_t print_list(const list_t *h)
