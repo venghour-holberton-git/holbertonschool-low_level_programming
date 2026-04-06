@@ -6,6 +6,7 @@
 /*
  * print_list - print the all string on the list
  * @h - input list
+ * description - print all string
  * Return: number of elements available on the list
  */
 
