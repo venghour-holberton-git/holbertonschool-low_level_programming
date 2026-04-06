@@ -4,9 +4,8 @@
 #include "lists.h"
 
 /*
- * print_list - prints all the strings in the list
+ * print_list - prints str on the list and return the amount of elements
  * @h: pointer to the list
- *
  * Return: number of elements in the list
  */
 size_t print_list(const list_t *h)
