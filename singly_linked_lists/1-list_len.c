@@ -1,5 +1,9 @@
 #include "lists.h"
 
+/**
+ * list_len - return the amount of elements
+ * @h: input list
+ */
 size_t list_len(const list_t *h)
 {
 	int i = 1;
