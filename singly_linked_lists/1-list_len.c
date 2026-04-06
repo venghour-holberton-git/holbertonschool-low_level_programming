@@ -3,6 +3,7 @@
 /**
  * list_len - return the amount of elements
  * @h: input list
+ * Return: the amount of elements on the list
  */
 size_t list_len(const list_t *h)
 {
