@@ -1,0 +1,23 @@
+#include "lists.h"
+
+/**
+ * add_node - add new node add the beginning
+ * @head: head of the node
+ * @str: string to be added
+ */
+
+list_t *add_node(list_t **head, const char *str)
+{
+	unsigned int len = 0;
+	list_t *new_node;
+	list_t *next_node = malloc(sizeof(list_t));
+	new_node = malloc(sizeof(list_t));
+	next_node = *head;
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	*new_node = (list_t){strdup(str), len, next_node};
+	*head = new_node;
+}
