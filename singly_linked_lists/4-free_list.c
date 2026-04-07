@@ -1,6 +1,7 @@
 #include "lists.h"
 
-/** free_list - free the list
+/**
+ * free_list - free the list
  * @head: list head
  */
 
