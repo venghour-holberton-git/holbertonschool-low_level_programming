@@ -9,6 +9,6 @@
 int sum_dlistint(dlistint_t *head)
 {
 	if (head == NULL)
-		return 0;
-	return head->n + sum_dlistint(head->next);
+		return (0);
+	return (head->n + sum_dlistint(head->next));
 }
