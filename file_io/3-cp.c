@@ -5,8 +5,7 @@ int main(int argc, char **argv)
 	int fd;
 	int fd2;
 	ssize_t read_bytes;
-	int buffer_size = 1024;
-	char buffer[buffer_size];
+	char buffer[1024];
 
 	if (argc < 3)
 		return (0);
