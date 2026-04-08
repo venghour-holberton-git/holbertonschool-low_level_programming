@@ -5,7 +5,8 @@ int main(int argc, char **argv)
 	int fd;
 	int fd2;
 	ssize_t read_bytes;
-	char buffer[1024];
+	int buffer_size = 1024;
+	char buffer[buffer_size];
 
 	if (argc < 3)
 		return (0);
@@ -16,6 +17,10 @@ int main(int argc, char **argv)
 	fd2 = open(argv[2], O_CREAT | O_WRONLY, 0666);
 	if (fd2 == -1)
 		return (0);
-	write(fd2, buffer, read_bytes);
+	while (read_bytes > 0)
+	{
+		write(fd2, buffer, read_bytes);
+		read_bytes = read(fd, buffer, sizeof(buffer));
+	}
 	return (0);
 }
