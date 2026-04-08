@@ -21,11 +21,17 @@ int main(int argc, char **argv)
 	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
-		return (0);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to");
+		exit(99);
+	}
 	read_bytes = read(fd, buffer, sizeof(buffer));
 	fd2 = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	if (fd2 == -1)
-		return (0);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to");
+		exit(99);
+	}
 	while (read_bytes > 0)
 	{
 		write(fd2, buffer, read_bytes);
