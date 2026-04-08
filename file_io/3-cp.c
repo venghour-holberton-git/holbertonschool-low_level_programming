@@ -22,8 +22,8 @@ int main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	read_bytes = read(fd, buffer, sizeof(buffer));
 	fd2 = open(argv[2], O_CREAT | O_WRONLY, 0664);
