@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	if (fd == -1)
 		return (0);
 	read_bytes = read(fd, buffer, sizeof(buffer));
-	fd2 = open(argv[2], O_CREAT | O_WRONLY, 0666);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	if (fd2 == -1)
 		return (0);
 	while (read_bytes > 0)
