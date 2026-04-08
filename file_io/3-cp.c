@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * main - program entry point
+ * @argc: amount of argument
+ * @argv: array of argument
  * Return: Always 0.
  */
 
@@ -15,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (argc < 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: file_from file_to\n");
 		exit(97);
 	}
 	fd = open(argv[1], O_RDONLY);
