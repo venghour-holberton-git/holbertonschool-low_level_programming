@@ -10,14 +10,9 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	char *filepath;
 	size_t len;
-
-	filepath = malloc(strlen("./") + strlen(filename));
-	strcpy(filepath, "./");
-	strcat(filepath, filename);
 	
-	fd = open(filepath, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
 	if (text_content != NULL)
 	{
 		while (text_content[len] != '\0')
