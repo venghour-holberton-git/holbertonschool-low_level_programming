@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	current_node = ht->array[index];
 	while (current_node != NULL)
 	{
-		if (strcmp(current_node->key, (const unsigned char *)key))
+		if (strcmp(current_node->key, key))
 		{
 			current_node->value = strdup(value);
 			return (1);
